@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.config.CatalogController">
+   <children>
+      <TabPane layoutY="1.0" prefHeight="900.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Сборка">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="847.0" prefWidth="1200.0">
+                     <children>
+                        <TableView fx:id="systemUnitTab" prefHeight="795.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="idSystemColumn" prefWidth="41.0" text="№" />
+                            <TableColumn fx:id="nameSystemColumn" prefWidth="252.0" text="Название" />
+                              <TableColumn fx:id="motherboardSystemColumn" prefWidth="532.0" text="Система" />
+                              <TableColumn fx:id="coolerSystemColumn" prefWidth="264.0" text="Охлаждение" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonBuySystemUnit" layoutX="537.0" layoutY="832.0" mnemonicParsing="false" onAction="#actionBuySystemUnit" text="Добавить в корзину" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Материнские платы и системы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0">
+                     <children>
+                        <TableView fx:id="mothderboardTab" prefHeight="763.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="idMotherboardColumn" prefWidth="43.0" text="№" />
+                            <TableColumn fx:id="nameMotherboardColumn" prefWidth="107.0" text="Название" />
+                              <TableColumn fx:id="chipsetColumn" prefWidth="75.0" text="Чипсет" />
+                              <TableColumn fx:id="frequencyRamColumn" prefWidth="85.0" text="Частота ОЗУ" />
+                              <TableColumn fx:id="maxRamColumn" prefWidth="65.0" text="Макс. объем ОЗУ" />
+                              <TableColumn fx:id="numberRamSlotsColumn" prefWidth="75.0" text="Число слотов ОЗУ" />
+                              <TableColumn fx:id="socketColumn" prefWidth="75.0" text="Сокет" />
+                              <TableColumn fx:id="formFactorColumn" prefWidth="75.0" text="Форм фактор" />
+                              <TableColumn fx:id="typeRamSystemColumn" prefWidth="75.0" text="Тип ОЗУ" />
+                              <TableColumn fx:id="typePowerColumn" prefWidth="75.0" text="Питание" />
+                              <TableColumn fx:id="brendSystemColumn" prefWidth="75.0" text="Бренд" />
+                              <TableColumn fx:id="typeConnectionColumn" prefWidth="75.0" text="Тип подключения" />
+                              <TableColumn fx:id="RamSystemColumn" prefWidth="75.0" text="ОЗУ" />
+                              <TableColumn fx:id="cpuSystemColumn" prefWidth="75.0" text="ЦП" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonBuyMotherboard" layoutX="537.0" layoutY="832.0" mnemonicParsing="false" onAction="#actionBuyMotherboard" text="Добавить в корзину" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Процессоры">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="cpuTab" prefHeight="779.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="idCpuColumn" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="nameCpuColumn" maxWidth="680.0" prefWidth="680.0" resizable="false" text="Название" />
+                              <TableColumn fx:id="brendCpuColumn" prefWidth="444.0" text="Бренд" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonBuyCPU" layoutX="537.0" layoutY="832.0" mnemonicParsing="false" onAction="#actionBuyCpu" text="Добавить в корзину" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="ramTab" text="Оперативная памаять">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="703.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="idRamColumn" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="nameRamColumn" prefWidth="75.0" text="Название" />
+                              <TableColumn fx:id="volumeColumn" prefWidth="75.0" text="Объем" />
+                              <TableColumn fx:id="clockSpeedColumn" prefWidth="75.0" text="Частота" />
+                              <TableColumn fx:id="brendRamColumn" prefWidth="75.0" text="Бренд" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonBuyRAM" layoutX="537.0" layoutY="832.0" mnemonicParsing="false" onAction="#actionBuyRAM" text="Добавить в корзину" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="buttonBuyCooler" onSelectionChanged="#actionBuyCooler" text="Охлаждение">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="753.0" prefWidth="1090.0">
+                     <children>
+                        <TableView fx:id="coolerTab" prefHeight="739.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="idCoolerColumn" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="nameCoolerColumn" prefWidth="565.0" text="Название" />
+                              <TableColumn fx:id="brendCoolerColumn" prefWidth="559.0" text="Бренд" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="537.0" layoutY="832.0" mnemonicParsing="false" text="Добавить в корзину" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
